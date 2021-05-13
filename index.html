@@ -3,17 +3,61 @@
 
 <head>
 
-    <title>jobinrjohnson</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="jobinrjohnson">
-    <meta name="description" content="Jobin Johnson, My personal website.">
-    <meta name="keywords" content="jobinrjohnson">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="author" content="jobinrjohnson">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+
+    <!-- Primary Meta Tags -->
+    <title>@jobinrjohnson | Jobin Johnson Personal Website</title>
+    <meta name="title" content="Jobin Johnson">
+    <meta name="description"
+        content="Jobin Johnson, Developer by profession. Trying to be a jack of all trades. Software Developer, Electronics Hacker, Entrepreneur, Student, Technology Enthusiast.">
+    <meta name="keywords" content="jobinrjohnson">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jobinrjohnson.in/">
+    <meta property="og:title" content="jobinrjohnson">
+    <meta property="og:description"
+        content="Jobin Johnson, Developer by profession. Trying to be a jack of all trades. Software Developer, Electronics Hacker, Entrepreneur, Student, Technology Enthusiast.">
+    <meta property="og:image" content="https://jobinrjohnson.in/me.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://jobinrjohnson.in/">
+    <meta property="twitter:title" content="jobinrjohnson">
+    <meta property="twitter:description"
+        content="Jobin Johnson, Developer by profession. Trying to be a jack of all trades. Software Developer, Electronics Hacker, Entrepreneur, Student, Technology Enthusiast.">
+    <meta property="twitter:image" content="https://jobinrjohnson.in/me.jpeg">
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "Jobin Johnson",
+        "image": "https://avatars3.githubusercontent.com/u/15014041",
+        "jobTitle": "Software Developer",
+        "email": "mailto:jobin@jobinrjohnson.in",
+        "url": "https://jobinrjohnson.in/",
+        "homeLocation" : {
+            "@type" : "Place",
+            "name" : "Bengaluru, Karnataka, India"
+        }
+    }
+    </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
@@ -35,11 +79,12 @@
             min-height: 100vh;
             margin: 0;
             padding: 10px;
+            line-height: 26px;
         }
 
         h1 {
             font-weight: normal;
-            font-size: 46px;
+            font-size: 32px;
         }
 
         .mb-0 {
@@ -101,13 +146,9 @@
 
             margin-top: 100px;
             margin-bottom: 40px;
-            display: none;
         }
 
         .profile-image {
-            width: 200px;
-            height: 200px;
-            padding: 20px;
             margin: auto;
             margin-top: -100px;
             border-radius: 50%;
@@ -147,7 +188,7 @@
 
             0% {
                 opacity: 0;
-                transform: scale(0);
+                transform: scale(.9);
             }
 
             100% {
@@ -158,11 +199,13 @@
 
         @keyframes blink {
 
-            0%,40% {
+            0%,
+            40% {
                 opacity: 0;
             }
 
-            50%,90% {
+            50%,
+            90% {
                 opacity: 1;
             }
 
@@ -181,16 +224,21 @@
     <div class="content first-content" id="main-content">
 
         <div class="profile-image">
-            <img src="https://avatars3.githubusercontent.com/u/15014041">
+            <img class="avatar avatar-user" src="me.jpeg" alt="@jobinrjohnson" width="160px" height="160px">
         </div>
 
 
 
-        <h2>Jobin Johnson</h2>
-        <p class="mb-0">Software Developer, Technology Enthusiast</p>
+        <h1>Jobin Johnson</h1>
+        <p class="mb-0">
+            Developer by profession.
+            <br>
+            Trying to be a jack of all trades.
+        </p>
+        <p>Software Developer, Electronics Hacker, Entrepreneur, Student, Technology Enthusiast.</p>
         <p>Bengaluru, Karnataka, India.</p>
 
-        <br><br>
+        <br>
 
         <div class="social-icons">
             <a target="_blank" href="https://github.com/jobinrjohnson">
@@ -234,54 +282,6 @@
         <br>
 
     </div>
-
-    <div id="typing-screen">
-        <h1> <span id="type"></span><span class="blink-cursor">|</span></h1>
-    </div>
-
-
-    <script>
-
-        let typingInterval = null;
-        let typingCounter = 0;
-
-        function startTyping(typeString, callback) {
-
-            let typingElement = document.getElementById("type");
-
-            let typeLength = typeString.length;
-
-            typingElement.innerText = "";
-
-            typingInterval = window.setInterval(function () {
-
-                if (typingCounter >= typeLength) {
-                    window.clearInterval(typingInterval);
-                    setTimeout(callback, 1000);
-                    return;
-                }
-
-                typingElement.innerHTML += typeString[typingCounter++];
-
-            }, 400);
-
-        }
-
-
-
-        window.onload = function () {
-
-            startTyping("Hi, ", function () {
-
-                document.getElementById("typing-screen").style.display = "none"
-                document.getElementById("main-content").style.display = "block"
-
-            });
-
-        };
-
-    </script>
-
 
 
 </body>
